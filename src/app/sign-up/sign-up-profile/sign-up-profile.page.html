@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Sign Up</ion-title>
+        <img slot="end" src="../assets/icons8-da-vinci-100.png" width="100">
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div id="container">
+        <ion-card>
+            <form [formGroup]="signUpProfileForm">
+                <h1>Profile Photo</h1>
+                <img tappable onclick="this.value = null" id="profileImage" src="https://i.stack.imgur.com/YQu5k.png" (click)="uploadImage()" width="200" height="200" />
+                <input id="imageUploadSignUp" type="file" formControlName="profilePhoto" (change)="loadImage($event.target.files)">
+                <ion-item>
+                    <ion-label position="floating">
+                        <ion-text color="dark">Tagline:</ion-text>
+                    </ion-label>
+                    <ion-input type="text" formControlName="tagline"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label position="floating">
+                        <ion-text color="dark">Description:</ion-text>
+                    </ion-label>
+                    <ion-input type="text" formControlName="description"></ion-input>
+                </ion-item>
+                <ion-button type="submit" value="Submit" (click)="sendToFirebase()">Continue</ion-button>
+            </form>
+        </ion-card>
+    </div>
+</ion-content>

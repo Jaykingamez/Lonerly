@@ -1,0 +1,35 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-toolbar>
+            <ion-title>Lonerly</ion-title>
+            <img slot="end" src="../assets/icons8-da-vinci-100.png" width="100">
+        </ion-toolbar>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <ion-card-header>
+            <ion-item>
+                <ion-avatar>
+                    <img id="lonelyImage" src="https://miro.medium.com/max/3840/1*21_e9cI0Ps3NlyWrr6jQDg.jpeg">
+                </ion-avatar>
+                <ion-label color="dark">
+                    <h1>{{username}}</h1>
+                    <br>
+                    <h3>{{tagline}}</h3>
+                </ion-label>
+            </ion-item>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-textarea color="dark" [(ngModel)]="description" placeholder="Type your description here"></ion-textarea>
+            <h3 color="dark">#{{firstInterest}}</h3>
+            <h3 color="dark">#{{secondInterest}}</h3>
+            <h3 color="dark">#{{thirdInterest}}</h3>
+            <br>
+            <ion-item id="mapLonely">
+            </ion-item>
+            <ion-button (click)="uploadToFirebase()">Submit</ion-button>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

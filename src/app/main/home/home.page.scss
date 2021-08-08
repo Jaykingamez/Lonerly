@@ -1,0 +1,18 @@
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+
+.map {
+    height: 100%;
+    margin-bottom: 50px;
+    --min-height: 170px;
+}
+
+ion-label {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+ion-avatar {
+    width: 5%;
+    height: 75%;
+}

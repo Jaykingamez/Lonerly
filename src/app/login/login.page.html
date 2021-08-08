@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-toolbar>
+        <img slot="end" src="../assets/icons8-da-vinci-100.png" width="50">
+        <ion-title>Login</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <form [formGroup]="loginForm">
+        <ion-item>
+            <ion-label position="floating">
+                <ion-text color="dark">Username:</ion-text>
+            </ion-label>
+            <ion-input type="text" formControlName="username"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">
+                <ion-text color="dark">Password:</ion-text>
+            </ion-label>
+            <ion-input type="password" formControlName="password"></ion-input>
+        </ion-item>
+        <ion-button type="submit" value="Submit" (click)="login()">Log In</ion-button>
+    </form>
+    <ion-button (click)="authService.FacebookAuth()">Facebook</ion-button>
+    <ion-button (click)="authService.GoogleAuth()">Google</ion-button>
+</ion-content>

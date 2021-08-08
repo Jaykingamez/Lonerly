@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-toolbar>
+            <ion-buttons slot="start">
+                <ion-back-button></ion-back-button>
+            </ion-buttons>
+            <ion-title>Lonerly</ion-title>
+            <img slot="end" src="../assets/icons8-da-vinci-100.png" width="100">
+        </ion-toolbar>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <ion-card-header>
+            <ion-item>
+                <ion-avatar>
+                    <img id="lonerImage" src="https://miro.medium.com/max/3840/1*21_e9cI0Ps3NlyWrr6jQDg.jpeg" (click)="viewUser()">
+                </ion-avatar>
+                <ion-label>
+                    <h1>{{username}}</h1>
+                    <br>
+                    <h3>{{tagline}}</h3>
+                </ion-label>
+            </ion-item>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-label color="dark">
+                <h2 placeholder="It seems the description is empty">{{description}}</h2>
+                <br>
+                <h3>#{{firstInterest}}</h3>
+                <h3>#{{secondInterest}}</h3>
+                <h3>#{{thirdInterest}}</h3>
+                <br>
+            </ion-label>
+            <ion-item id="mapLoner">
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

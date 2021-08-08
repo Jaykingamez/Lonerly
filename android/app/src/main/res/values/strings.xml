@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">lonerly2</string>
+    <string name="title_activity_main">lonerly2</string>
+    <string name="package_name">io.ionic.starter</string>
+    <string name="custom_url_scheme">io.ionic.starter</string>
+    <string name="fb_app_id">582941379365777</string>
+    <string name="fb_app_name">Lonerly</string>
+    <string name="facebook_client_token">464640aff3049110dc865818eb227f9e</string>
+    <string name="server_client_id">830187853482-90lmdf4avrs72njjhtf9t6cp0l5370ko.apps.googleusercontent.com</string>
+</resources>

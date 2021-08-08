@@ -1,0 +1,36 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Login</ion-title>
+        <img slot="end" src="../assets/icons8-da-vinci-100.png" width="100">
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div id="container">
+        <h1>Interests</h1>
+        <ion-list [hidden]="fieldInterestArray.length == 0">
+            <ion-item *ngFor="let field of fieldInterestArray" (click)="setCategoryInterests(field)">{{field}}
+            </ion-item>
+        </ion-list>
+        <ion-list [hidden]="categoryInterestArray.length == 0">
+            <ion-item *ngFor="let category of categoryInterestArray" (click)="setSpecificInterests(category)">{{category}}
+            </ion-item>
+        </ion-list>
+        <ion-list [hidden]="specificInterestArray.length == 0">
+            <ion-item *ngFor="let specific of specificInterestArray" (click)="setInterest(specific)">{{specific}}
+            </ion-item>
+        </ion-list>
+        <form [formGroup]="signUpInterestsForm" [hidden]="!(selectedInterest.length == 0)">
+            <ion-item>
+                <ion-input id="firstInterest" type="text" formControlName="firstInterest" placeholder="Click to choose your interest" (click)="selectInterest('firstInterest')"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-input id="secondInterest" type="text" formControlName="secondInterest" placeholder="Click to choose your interest" (click)="selectInterest('secondInterest')"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-input id="thirdInterest" type="text" formControlName="thirdInterest" placeholder="Click to choose your interest" (click)="selectInterest('thirdInterest')"></ion-input>
+            </ion-item>
+            <ion-button type="submit" value="Submit" (click)="uploadInterest()">Continue</ion-button>
+        </form>
+    </div>
+</ion-content>

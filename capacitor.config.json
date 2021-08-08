@@ -1,6 +1,6 @@
 {
-	"appId": "io.ionic.starter",
-	"appName": "lonerly2",
-	"webDir": "www",
-	"bundledWebRuntime": false
+    "appId": "io.ionic.starter",
+    "appName": "lonerly",
+    "webDir": "www",
+    "bundledWebRuntime": false
 }

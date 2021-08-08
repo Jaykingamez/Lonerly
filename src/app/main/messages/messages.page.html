@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Messages</ion-title>
+        <img slot="end" src="../assets/icons8-da-vinci-100.png" width="100">
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-card #conversations *ngFor="let conversation of conversationList" [routerLink]="['/main/messages', compareUids(currentUid, conversation['uid'])]">
+            <ion-card-header>
+                <ion-item>
+                    <ion-avatar>
+                        <img id="messageImage{{conversationList.indexOf(conversation)}}" src="https://miro.medium.com/max/3840/1*21_e9cI0Ps3NlyWrr6jQDg.jpeg">
+                    </ion-avatar>
+                    <ion-label>
+                        <h3 id="lastMessage{{conversationList.indexOf(conversation)}}">Last message</h3>
+                    </ion-label>
+                </ion-item>
+            </ion-card-header>
+            <ion-card-content>
+                <ion-item>
+                    <h2 slot="start">{{conversation["username"]}}</h2>
+                    <h2 id="timestamp{{conversationList.indexOf(conversation)}}" class="timestamp" slot="end"> 07:03</h2>
+                </ion-item>
+            </ion-card-content>
+        </ion-card>
+    </ion-list>
+</ion-content>

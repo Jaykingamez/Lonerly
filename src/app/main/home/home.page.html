@@ -1,0 +1,30 @@
+<ion-header>
+
+    <ion-toolbar>
+        <ion-title>Lonerly</ion-title>
+        <img slot="end" src="../assets/icons8-da-vinci-100.png" width="100">
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-card #theLonelyList *ngFor="let snapshot of snapshotArray" [routerLink]="['/main/home', snapshot.id]">
+            <ion-card-header>
+                <ion-item>
+                    <ion-avatar>
+                        <img id="profileImage{{snapshotArray.indexOf(snapshot)}}" src="https://miro.medium.com/max/3840/1*21_e9cI0Ps3NlyWrr6jQDg.jpeg">
+                    </ion-avatar>
+                    <ion-label>
+                        <h1 id="username{{snapshotArray.indexOf(snapshot)}}">Username</h1>
+                        <br>
+                        <h3 id="tagline{{snapshotArray.indexOf(snapshot)}}">Tagline</h3>
+                    </ion-label>
+                </ion-item>
+            </ion-card-header>
+            <ion-card-content>
+                <ion-item id="map{{snapshotArray.indexOf(snapshot)}}" class="map">
+                </ion-item>
+            </ion-card-content>
+        </ion-card>
+    </ion-list>
+</ion-content>

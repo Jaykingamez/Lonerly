@@ -1,0 +1,58 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Login</ion-title>
+        <img slot="end" src="../assets/icons8-da-vinci-100.png" width="100">
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div>
+        <ion-button (click)="authService.signUpFacebookAuth()">Facebook</ion-button>
+        <ion-button (click)="authService.signUpGoogleAuth()">Google</ion-button>
+        <form [formGroup]="signUpForm">
+            <ion-item>
+                <ion-label position="floating">
+                    <ion-text color="dark">Username:</ion-text>
+                </ion-label>
+                <ion-input type="text" formControlName="username"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating">
+                    <ion-text color="dark">Password:</ion-text>
+                </ion-label>
+                <ion-input type="password" formControlName="password"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating">
+                    <ion-text color="dark">First Name:</ion-text>
+                </ion-label>
+                <ion-input type="text" formControlName="firstName"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating">
+                    <ion-text color="dark">Last Name:</ion-text>
+                </ion-label>
+                <ion-input type="text" formControlName="lastName"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating">
+                    <ion-text color="dark">Gender:</ion-text>
+                </ion-label>
+                <ion-input type="text" formControlName="gender"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating">
+                    <ion-text color="dark">Mobile Number:</ion-text>
+                </ion-label>
+                <ion-input type="text" formControlName="mobileNumber"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating">
+                    <ion-text color="dark">Email Address:</ion-text>
+                </ion-label>
+                <ion-input type="text" formControlName="emailAddress"></ion-input>
+            </ion-item>
+            <ion-button type="submit" value="Submit" (click)="signUp()">Sign Up</ion-button>
+        </form>
+    </div>
+</ion-content>
