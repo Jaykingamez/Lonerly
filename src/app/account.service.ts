@@ -41,7 +41,7 @@ export class AccountService {
     return this.firestore.collection("Accounts").doc(userId).set({
       username: username,
       emailAddress: email
-    })
+    });
   }
 
   // updates description and tagline in the account document
